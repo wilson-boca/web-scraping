@@ -27,6 +27,11 @@ ROBOTSTXT_OBEY = True
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY = 3
 RANDOMIZE_DOWNLOAD_DELAY = False
+
+FEED_FORMAT = 'json'
+FEED_EXPORT_FIELDS = ["author_name", "author_from", "comment_title", "comment_body", "comment_date"]
+FEED_URI = 'result.json'
+
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
