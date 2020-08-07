@@ -4,16 +4,18 @@ A Python web scraping project with WordCloud graphic
 
 ### Installing
 
-Installing virtualenvwrapper
+To install virtualenvwrapper
 ```
 $ sudo pip install virtualenvwrapper
 $ sudo gedit ~/.bashrc or ~/.zshrc
-Add this in the end of file and reopen the terminal
+
+Add this piece of code in the end of file and reopen the terminal:
+
 $ export WORKON_HOME=$HOME/.virtualenvs
 $ source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-Installing requirements
+To install requirements
 ```
 $ mkvirtualenv web-scraping --python=python3
 $ workon web-scraping
@@ -33,7 +35,7 @@ $ scrapy crawl trip_comments -o tripadvisor.csv
 ```
 Running the WordCloud generator
 ```
-To craw and create imnage run the script
+To craw and create the WordCloud image run the script:
 $ python main.py
 
 To create the WordCloud image only:
