@@ -12,10 +12,10 @@ class TripCommentsSpider(scrapy.Spider):
         squares = response.xpath("//div[@class='Dq9MAugU T870kzTX LnVzGwUB']")
         for square in squares:
             item["author_name"] = square.xpath(".//div[@class='_2fxQ4TOx']/span/a/text()").get()
-            item["author_from"] = square.xpath("//span[@class='default _3J15flPT small']/text()").get()
-            item["comment_title"] = square.xpath("//div[@class='glasR4aX']/a//span/text()").get()
-            item["comment_body"] = square.xpath("//div[@class='cPQsENeY']/q/span/text()").get()
-            item["comment_date"] = square.xpath("//span[@class='_34Xs-BQm']/text()").get()
+            item["author_from"] = square.xpath(".//span[@class='default _3J15flPT small']/text()").get()
+            item["comment_title"] = square.xpath(".//div[@class='glasR4aX']/a//span/text()").get()
+            item["comment_body"] = square.xpath(".//q[@class='IRsGHoPm']/span/text()").get()
+            item["comment_date"] = square.xpath(".//span[@class='_34Xs-BQm']/text()").get()
             yield item
 
         next_page = response.xpath("//a[@class='ui_button nav next primary ' and text()='Próximas']/@href").get()

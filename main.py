@@ -2,6 +2,7 @@ import os
 
 from tripadvisor.tripadvisor.spiders.comments import TripCommentsSpider
 from scrapy.crawler import CrawlerProcess
+from word_cloud import GenerateWordCloud
 
 
 if __name__ == "__main__":
@@ -15,3 +16,6 @@ if __name__ == "__main__":
     })
     process.crawl(TripCommentsSpider)
     process.start()
+    words = GenerateWordCloud()
+    words.read_csv('tripadvisor.csv')
+    words.generate_image('tripadvisor_word_cloud.png')

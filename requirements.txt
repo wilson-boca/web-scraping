@@ -1,1 +1,5 @@
 scrapy
+numpy
+pandas
+matplotlib
+wordcloud
