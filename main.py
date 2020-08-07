@@ -17,5 +17,5 @@ if __name__ == "__main__":
     process.crawl(TripCommentsSpider)
     process.start()
     words = GenerateWordCloud()
-    words.read_csv('tripadvisor.csv')
+    words.read_csv('result.csv')
     words.generate_image('tripadvisor_word_cloud.png')

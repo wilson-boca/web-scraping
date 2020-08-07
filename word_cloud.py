@@ -1,11 +1,14 @@
+import pathlib
 import pandas as pd
 import matplotlib.pyplot as plt
+
 from wordcloud import WordCloud, STOPWORDS
 
 
 class GenerateWordCloud(object):
     def __init__(self):
         self.df = None
+        self.current_path = pathlib.Path(__file__).parent.absolute()
         self.stopwords = ["do", "da", "dos", "das", "meu", "seu", "nosso", "em", "você", "de", "ao", "os",
                           "no", "na", "nos", "nas", "não", "que", "quem", "mas", "são", "e", "é", "mais",
                           "muito", "um", "está", "com", "tem", "sem", "esse", "só", "nesse", "nessa", "nessas",
@@ -15,8 +18,11 @@ class GenerateWordCloud(object):
                           "fui", "foi", "fica", "ainda", "quer", "tudo", "por", "já", "porém", "lá", "la", "todos",
                           "todo", "alguma", "etc"]
 
-    def read_csv(self, csv_path):
-        self.df = pd.read_csv(csv_path)
+    def read_csv(self, csv_path=None):
+        if csv_path is None:
+            self.df = pd.read_csv('{}/tripadvisor/tripadvisor/tripadvisor.csv'.format(self.current_path))
+        else:
+            self.df = pd.read_csv(csv_path)
 
     def generate_image(self, image_path):
         summary = self.df.dropna(subset=['comment_body'], axis=0)['comment_body']
@@ -35,5 +41,5 @@ class GenerateWordCloud(object):
 
 if __name__ == "__main__":
     words = GenerateWordCloud()
-    words.read_csv('/home/rodrigo/projects/web-scraping/tripadvisor/tripadvisor/tripadvisor.csv')
+    words.read_csv()
     words.generate_image('tripadvisor_word_cloud.png')
