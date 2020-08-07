@@ -16,7 +16,7 @@ class GenerateWordCloud(object):
                           "pra", "um", "uma", "uns", "umas", "ir", "vir", "mesmo", "eu", "ser", "estar", "além",
                           "pelo", "pela", "ele", "ela", "eles", "elas", "nossa", "nossas", "nosso", "nossos", "até",
                           "fui", "foi", "fica", "ainda", "quer", "tudo", "por", "já", "porém", "lá", "la", "todos",
-                          "todo", "alguma", "etc"]
+                          "todo", "alguma", "etc", "dava", "Lá", "embora", "cada"]
 
     def read_csv(self, csv_path=None):
         if csv_path is None:

@@ -18,7 +18,7 @@ class TripCommentsSpider(scrapy.Spider):
             item["comment_date"] = square.xpath(".//span[@class='_34Xs-BQm']/text()").get()
             yield item
 
-        next_page = response.xpath("//a[@class='ui_button nav next primary ' and text()='Próximas']/@href").get()
-        if next_page:
-            print(next_page)
-            yield response.follow(url=next_page, callback=self.parse)
+        # next_page = response.xpath("//a[@class='ui_button nav next primary ' and text()='Próximas']/@href").get()
+        # if next_page:
+        #     print(next_page)
+        #     yield response.follow(url=next_page, callback=self.parse)

@@ -1,6 +1,6 @@
 # Python WebScraping
 
-A Python web scraping project
+A Python web scraping project with WordCloud graphic
 
 ### Installing
 
@@ -13,11 +13,14 @@ $ pip3 install -r requirements.txt
 
 Running the crawler
 ```
+$ cd tripadvisor
+$ cd tripadvisor
+
 To export to JSON
-$ scrapy crawl trip_comments -o all_pages.json
+$ scrapy crawl trip_comments -o tripadvisor.json
 
 To export to CSV
-$ scrapy crawl trip_comments -o all_pages.csv
+$ scrapy crawl trip_comments -o tripadvisor.csv
 ```
 Running the WordCloud generator
 ```
