@@ -4,6 +4,15 @@ A Python web scraping project with WordCloud graphic
 
 ### Installing
 
+Installing virtualenvwrapper
+```
+$ sudo pip install virtualenvwrapper
+$ sudo gedit ~/.bashrc or ~/.zshrc
+Add this in the end of file and reopen the terminal
+$ export WORKON_HOME=$HOME/.virtualenvs
+$ source /usr/local/bin/virtualenvwrapper.sh
+```
+
 Installing requirements
 ```
 $ mkvirtualenv web-scraping --python=python3
